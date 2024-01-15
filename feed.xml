@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>RockByte Security Blog</title>
+    <link href="https://blog.rockbytesec.com/feed.xml" rel="self" />
+    <link href="https://blog.rockbytesec.com" />
+    <updated>2024-01-15T15:32:41+01:00</updated>
+    <author>
+        <name>Mehul Panchal</name>
+    </author>
+    <id>https://blog.rockbytesec.com</id>
+
+    <entry>
+        <title>7 CyberSecurity Tips for Developers</title>
+        <author>
+            <name>Mehul Panchal</name>
+        </author>
+        <link href="https://blog.rockbytesec.com/7-cybersecurity-tips-for-developers.html"/>
+        <id>https://blog.rockbytesec.com/7-cybersecurity-tips-for-developers.html</id>
+            <category term="Developers"/>
+
+        <updated>2024-01-15T15:32:09+01:00</updated>
+            <summary>
+                <![CDATA[
+                    No matter how many penetration tests your organization runs per year, this thing always gives you headaches and overtime. Yes, we’re talking about manual penetration tests. It’s undeniable that every&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>No matter how many penetration tests your organization runs per year, this thing always gives you headaches and overtime. Yes, we’re talking about manual penetration tests.</p>
+<p>It’s undeniable that every now and then you get a list of vulnerabilities in a report created by penetration testers. You’ve definitely experienced fixing these vulnerabilities in your web applications.</p>
+<p>But it’s certainly not as easy as it is to spell the names of the vulnerabilities.</p>
+<p>Here are the top 7 CyberSecurity Tips, these tips will save you from getting migraines:</p>
+<h2 id="1-input-validation">1. Input Validation</h2>
+<p>While creating the web application, you should make a note of every function that takes user input. An Excel sheet would work wonders. Name of the parameter, what type of values, etc…</p>
+<p>Closely understand what is the requirement of the user’s input here and how you could take the minimum possible input from the user.</p>
+<p>Boolean, Integers and Floats types are safe inputs by design but Strings and Objects types are where penetration testers try to have their fun.</p>
+<p>It’s best practice to determine which type of input is required. On top of it, using Regex to whitelist and verify that input is really what is expected by the application.</p>
+<p><strong>For Example:</strong> You need to take input as an email address. Instead of taking the input and immediately processing it through the database, you should process it through a middleware function like this:</p>
+<pre><code class="language-js">function validateEmail(email) {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+}
+</code></pre>
+<p>This was just an example of what middleware function could be used to validate email addresses from the user’s input.</p>
+<p>After understanding the above code you should be able to create middleware functions for any type of input validation.</p>
+<h2 id="2-role-based-access-control">2. Role-Based Access Control</h2>
+<p>Whenever a hierarchy exists in an organization, there is a need for a role-based web application.</p>
+<p>Roles could be anything from Administrator to the normal user. A role is typically associated with the real role of a person in the business hierarchy.</p>
+<p>A web application could have 1 or more roles. In the case of 1 role, there is no need to have authorization-based access control, except for the requirement to check whether the user is logged in.</p>
+<p>But when the role count increases to 2, you need to have proper access control.</p>
+<p>The user of one role shouldn’t be able to perform tasks that should only be performed by the user of another role.</p>
+<p><strong>For Example:</strong> A normal user shouldn’t be able to perform a task such as creating new users in the application which according to business logic, only an Administrator should be able to perform.</p>
+<h2 id="3-session-management">3. Session Management</h2>
+<p>Managing user sessions includes creating, validating and deleting session cookies.</p>
+<p>A session cookie leakage could lead to all sorts of problems including account takeover.</p>
+<p>It’s a best practice to delete the session cookies from the database after the user logs out to ensure that the cookie can no longer be used by anyone in case an attacker has physical access to the user’s computer.</p>
+<h2 id="4-http-security-headers-configuration">4. HTTP Security headers configuration</h2>
+<p>Some HTTP security headers need to be in place to prevent various types of attacks.</p>
+<p>This page from <a href="https://infosec.mozilla.org/guidelines/web_security">Mozilla</a> explains exactly what you need to understand and implement in the application to ensure that all browser-related security requirements are met.</p>
+<h2 id="5-error-handling">5. Error Handling</h2>
+<p>Handling the errors the right way in the application is very important. Default error pages of the servers and frameworks are known to reveal information that could be useful to attackers for future exploitation and discovery of new attack scenarios.</p>
+<p><strong>For Example:</strong> A custom error page like this will prevent the leakage of any information.</p>
+<hr>
+<p><figure class="post__image"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wikimedia_error_404.png" alt="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wikimedia_error_404.png"  data-is-external-image="true"></figure></p>
+<hr>
+<h2 id="6-secure-javascript">6. Secure Javascript</h2>
+<p>Creating functionality in Javascript is super easy but when it comes to client-side security, it’s a rough road.</p>
+<p>When it comes to input validation, the first tip is going to help you. But writing secure client-side Javascript is more than that.</p>
+<p>This page from <a href="https://developer.mozilla.org/en-US/docs/Web/Security">Mozilla</a> is going to help you through your journey of your secure by design web application’s client-side.</p>
+<h2 id="7-patching">7. Patching</h2>
+<p>Outdated softwares almost always have known vulnerabilities. That’s where patching the software and libraries helps your overall web application security posture to be ideal for security by design principles.</p>
+<p>Having outdated software doesn’t mean only one component could be attacked, it certainly affects the whole application.</p>
+<p>You should ensure that your code is not relying on any sort of outdated version of a library. Patching or updating those libraries to the latest versions routinely is a major step towards the security of your web applications.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Following all the 7 tips listed above will improve your security posture to the next level.</p>
+<p>I usually post tips for developers, so feel free to browse through my blog.</p>
+<p>Soon, I’ll be going through these tips with more details and examples.</p>
+<p>So, Until then: STAY TUNED!</p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Simple Guide to Wordlists</title>
+        <author>
+            <name>Mehul Panchal</name>
+        </author>
+        <link href="https://blog.rockbytesec.com/simple-guide-to-wordlists.html"/>
+        <id>https://blog.rockbytesec.com/simple-guide-to-wordlists.html</id>
+            <category term="Pentesters"/>
+
+        <updated>2024-01-15T15:32:19+01:00</updated>
+            <summary>
+                <![CDATA[
+                    The only advantage you can have above attackers in a BlackBox Pentest is your wordlists. For example, if an attacker has 100 words and a Pentester has 150 words, then&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>The only advantage you can have above attackers in a BlackBox Pentest is your wordlists. For example, if an attacker has 100 words and a Pentester has 150 words, then after a Pentest, there is a higher chance that the Pentester would figure out more endpoints in the application than the attacker and so the Pentester will be able to report more vulnerabilities. This ultimately leads to robust security.</p>
+<p>Whether you’re testing a Web/API server or performing an infrastructure Pentest, wordlists are your most important tool when it comes to discovering new endpoints or brute-forcing passwords.</p>
+<p>I recommend keeping different wordlists for different purposes.</p>
+<p>Here are the 3 robust steps that will help you create and maintain your wordlists:</p>
+<h2 id="1-run-cewl-on-target-application">1. Run <a href="https://github.com/digininja/CeWL.git">CeWL</a> on Target application</h2>
+<p>CeWL is an open-source tool to create wordlists by crawling through a web application. It will only create the wordlist with words that are found on the application, so there will be much less noise than a typical wordlist that you download from the internet.</p>
+<h2 id="2-use-altdns-for-permutations">2. Use <a href="https://github.com/infosec-au/altdns.git">AltDNS</a> for Permutations</h2>
+<p>Assuming you have already run CeWL and created a wordlist. The next step is to run AltDNS to generate permutations of the wordlist that has been generated by CeWL. Usually, AltDNS results in a huge wordlist, it might take some time, so be patient. Good things take time. The result will be a master list. Be sure to sort and remove duplicates.</p>
+<h2 id="3-maintaining-the-wordlist">3. Maintaining the wordlist</h2>
+<p>Maintaining a healthy wordlist is the key to success of a penetration test. To do so, running CeWL on every web application you encounter and adding the output to the master list is important.</p>
+<p>This is a good way to have a wordlist for your penetration tests. With each penetration test you perform, your master wordlist is going to get stronger and stronger. Now for wordlist of passwords, you can use a common password wordlist from the internet as an input to AltDNS would result in a great wordlist.</p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Guide to Whitebox Pentest</title>
+        <author>
+            <name>Mehul Panchal</name>
+        </author>
+        <link href="https://blog.rockbytesec.com/guide-to-whitebox-pentest.html"/>
+        <id>https://blog.rockbytesec.com/guide-to-whitebox-pentest.html</id>
+            <category term="Pentesters"/>
+
+        <updated>2024-01-15T15:32:41+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Reading code is like a Pentester’s superpower. Although it takes a lot of time to get good at it just like any other skill. But once you know how to&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Reading code is like a Pentester’s superpower. Although it takes a lot of time to get good at it just like any other skill.</p>
+<p>But once you know how to read and understand code efficiently in multiple languages, you can leverage that superpower to find the vulnerabilities that couldn’t have been found.</p>
+<p>These are the steps to make sure to make the best out of your practice of reading code:</p>
+<h2 id="1-know-how-to-code-and-know-computer-science">1. Know how to code and know Computer Science.</h2>
+<p>Reading the code comes after knowing how to code. Most of the hackers out there preach that you don’t need to know how to code to be a hacker and that’s absolutely a lie.
+Learning how to code should be the first thing you have to do in your journey to become a hacker. Learn to code not in one but multiple languages.
+First, learn to write code in Python and then C++. This way you’d understand programming concepts, low-level and object-oriented stuff.
+On top of this, you should know Computer Science concepts in depth.
+All of this is important to have technical mastery in the field of CyberSecurity.</p>
+<h2 id="2-know-how-to-pentest-blackbox-applications">2. Know how to Pentest BlackBox applications</h2>
+<p>Having done some BlackBox Pentests is a great way to have knowledge of vulnerabilities that could ever exist in the applications.
+If you know what vulnerabilities could possibly exist in a BlackBox application, then certainly you know what vulnerabilities could exist in a WhiteBox Application after you have read the code.</p>
+<h2 id="3-setting-up-the-environment">3. Setting up the environment</h2>
+<p>You could be the best hacker in the world, you could be James Bond of the hackers’ world. But you can only perform so much without a perfect environment setup to start with.</p>
+<p>Here is the essential list of what you’ll need to set to read code:</p>
+<ul>
+<li>The application should be running with debugging enabled.</li>
+<li>A perfect IDE connected to the debugging port of the application.</li>
+<li>Set a breakpoint</li>
+<li>Test if the IDE stops at the breakpoint</li>
+</ul>
+<h2 id="4-reading-and-understanding-the-code">4. Reading and Understanding the code</h2>
+<p>Ideally, the IDE will outline the functions of the application in the code. Go through each function one by one, by using the corresponding functionality in the application all while setting breakpoints, to understand their role in the application.</p>
+<p>After understanding the functions, you should be able to understand the developer’s writing pattern and business logic. Also, You should be able to understand the role of each function in the code.</p>
+<p>Finding vulnerabilities becomes so much easier when you have a complete map of the application’s functions in mind.</p>
+<h2 id="5-finding-the-vulnerabilities">5. Finding the Vulnerabilities</h2>
+<p>If you have done all the above steps correctly, then you’ll be automatically figuring out the possibilities of vulnerabilities.</p>
+<blockquote>
+<p>As this is just an overview of WhiteBox Pentest, I’ll going over every step in detail. Stay Tuned!</p>
+</blockquote>
+
+            ]]>
+        </content>
+    </entry>
+</feed>
