@@ -10,6 +10,22 @@
     },
     "items": [
         {
+            "id": "https://blog.rockbytesec.com/simple-zipping-and-unzipping-on-linux.html",
+            "url": "https://blog.rockbytesec.com/simple-zipping-and-unzipping-on-linux.html",
+            "title": "Simple Zipping and Unzipping on Linux",
+            "summary": "Nothing important here, move to Zipping part. It's so weird that nobody on internet talks about how to zip and unzip on linux. I happened to find some articles about&hellip;",
+            "content_html": "<blockquote>\n<p>Nothing important here, move to Zipping part.</p>\n</blockquote>\n<p>It's so weird that nobody on internet talks about how to zip and unzip on linux.</p>\n<p>I happened to find some articles about this topic but I only got the ones that talk about <strong>tar or gz</strong> file types.</p>\n<p>ChatGPT has destroyed people's mind and I was frustrated just like you. So, here is a quick tutorial of zipping and unzipping.</p>\n<h1>Zipping:</h1>\n<p>So let's say you have a zipped file with name: </p>\n<pre class=\"language-bash\"><code>alice.zip</code></pre>\n<p>How do you unzip this file? Here's the command:</p>\n<pre class=\"language-bash\"><code>zip -r alice.zip alice</code></pre>\n<p>Let me explain what's happening in the above command:</p>\n<ul>\n<li><strong>zip </strong>: tool name</li>\n<li><strong>-r </strong>: flag to make it recursively</li>\n<li><strong>alice.zip</strong> : Final result zip file that you need</li>\n<li><strong>alice</strong> : folder to zip</li>\n</ul>\n<h1>Unzipping:</h1>\n<p>Now about Unzipping:</p>\n<pre class=\"language-bash\"><code>unzip alice.zip -d bob</code></pre>\n<p>About this command:</p>\n<ul>\n<li><strong>unzip </strong>: tool name</li>\n<li><strong>alice.zip</strong> : Zipped file that you want to unzip</li>\n<li><strong>-d </strong>: flag to to specify the directory of extraction</li>\n<li><strong>bob</strong> : folder to put the contents of the zipped file</li>\n</ul>\n<p>The main thing here is that the directory doesn't have to exist before you run unzip command.</p>\n<p> </p>\n<p>I hope it helped you.</p>\n<p>Stay tuned on my 𝕏 account for updates. Thank you!</p>",
+            "author": {
+                "name": "Mehul Panchal"
+            },
+            "tags": [
+                   "Pentesters",
+                   "Developers"
+            ],
+            "date_published": "2024-03-02T22:23:23+01:00",
+            "date_modified": "2024-03-02T22:24:36+01:00"
+        },
+        {
             "id": "https://blog.rockbytesec.com/7-cybersecurity-tips-for-developers.html",
             "url": "https://blog.rockbytesec.com/7-cybersecurity-tips-for-developers.html",
             "title": "7 CyberSecurity Tips for Developers",

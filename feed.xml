@@ -3,12 +3,65 @@
     <title>RockByte Security Blog</title>
     <link href="https://blog.rockbytesec.com/feed.xml" rel="self" />
     <link href="https://blog.rockbytesec.com" />
-    <updated>2024-01-15T15:32:41+01:00</updated>
+    <updated>2024-03-02T22:24:36+01:00</updated>
     <author>
         <name>Mehul Panchal</name>
     </author>
     <id>https://blog.rockbytesec.com</id>
 
+    <entry>
+        <title>Simple Zipping and Unzipping on Linux</title>
+        <author>
+            <name>Mehul Panchal</name>
+        </author>
+        <link href="https://blog.rockbytesec.com/simple-zipping-and-unzipping-on-linux.html"/>
+        <id>https://blog.rockbytesec.com/simple-zipping-and-unzipping-on-linux.html</id>
+            <category term="Pentesters"/>
+            <category term="Developers"/>
+
+        <updated>2024-03-02T22:24:36+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Nothing important here, move to Zipping part. It's so weird that nobody on internet talks about how to zip and unzip on linux. I happened to find some articles about&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <blockquote>
+<p>Nothing important here, move to Zipping part.</p>
+</blockquote>
+<p>It's so weird that nobody on internet talks about how to zip and unzip on linux.</p>
+<p>I happened to find some articles about this topic but I only got the ones that talk about <strong>tar or gz</strong> file types.</p>
+<p>ChatGPT has destroyed people's mind and I was frustrated just like you. So, here is a quick tutorial of zipping and unzipping.</p>
+<h1>Zipping:</h1>
+<p>So let's say you have a zipped file with name: </p>
+<pre class="language-bash"><code>alice.zip</code></pre>
+<p>How do you unzip this file? Here's the command:</p>
+<pre class="language-bash"><code>zip -r alice.zip alice</code></pre>
+<p>Let me explain what's happening in the above command:</p>
+<ul>
+<li><strong>zip </strong>: tool name</li>
+<li><strong>-r </strong>: flag to make it recursively</li>
+<li><strong>alice.zip</strong> : Final result zip file that you need</li>
+<li><strong>alice</strong> : folder to zip</li>
+</ul>
+<h1>Unzipping:</h1>
+<p>Now about Unzipping:</p>
+<pre class="language-bash"><code>unzip alice.zip -d bob</code></pre>
+<p>About this command:</p>
+<ul>
+<li><strong>unzip </strong>: tool name</li>
+<li><strong>alice.zip</strong> : Zipped file that you want to unzip</li>
+<li><strong>-d </strong>: flag to to specify the directory of extraction</li>
+<li><strong>bob</strong> : folder to put the contents of the zipped file</li>
+</ul>
+<p>The main thing here is that the directory doesn't have to exist before you run unzip command.</p>
+<p> </p>
+<p>I hope it helped you.</p>
+<p>Stay tuned on my 𝕏 account for updates. Thank you!</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>7 CyberSecurity Tips for Developers</title>
         <author>
