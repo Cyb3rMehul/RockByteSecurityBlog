@@ -3,7 +3,7 @@
     <title>RockByte Security Blog</title>
     <link href="https://blog.rockbytesec.com/feed.xml" rel="self" />
     <link href="https://blog.rockbytesec.com" />
-    <updated>2024-11-19T16:27:20+01:00</updated>
+    <updated>2024-11-19T16:34:50+01:00</updated>
     <author>
         <name>Mehul Panchal</name>
     </author>
@@ -34,7 +34,7 @@
 <p><span style="font-weight: 400;">Existing defenses against cyber attacks won’t work anymore. You can monitor your systems endlessly with 24/7 Security Operations Centers (SOC). But that costs a lot and it’s not foolproof.</span></p>
 <p><strong>So, how to beat AI?</strong></p>
 <p><span style="font-weight: 400;">What about using AI in SOC? </span><span style="font-weight: 400;">Aside from it being an expensive solution, it will not mitigate the security flaws that your system has.</span></p>
-<p><span style="font-weight: 400;">Malicious actors are using AI-powered tools like PentestGPT, thanks to it being open-source. I have pointed out how Chinese hackers are using advanced systems to pentest in my post here on 𝕏: </span><a href="https://x.com/0daysecured/status/1773230821756789224?s=46"><span style="font-weight: 400;">https://x.com/0daysecured/status/1773230821756789224?s=46</span></a><span style="font-weight: 400;"> . Imagine making that system AI powered.</span></p>
+<p><span style="font-weight: 400;">Malicious actors are using AI-powered tools like PentestGPT, thanks to it being open-source. I have pointed out how Chinese hackers are using advanced systems to pentest in my post <a href="https://x.com/0daysecured/status/1773230821756789224?s=46">here on 𝕏</a></span><span style="font-weight: 400;">. Imagine making that system AI powered.</span></p>
 <p><span style="font-weight: 400;">In my opinion, our best weapon to beat AI based cyber attacks is AI-enhanced Penetration Tests.</span></p>
 <p><span style="font-weight: 400;">Developers are already using AI to develop systems and fix vulnerabilities. So, using AI to enhance performance of a manual penetration tester can be extremely fruitful.</span></p>
 <p><span style="font-weight: 400;">In this scenario, businesses deserve quick and high-quality pentest results, which is only possible using AI-powered tools. The <strong>PentestGPT</strong> is a great example of what an AI-powered penetration testing tool looks like. It can help penetration testers perform with higher quality and speed than ever before.</span></p>
