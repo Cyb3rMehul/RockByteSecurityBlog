@@ -3,7 +3,7 @@
     <title>RockByte Security Blog</title>
     <link href="https://blog.rockbytesec.com/feed.xml" rel="self" />
     <link href="https://blog.rockbytesec.com" />
-    <updated>2024-11-20T18:45:54+01:00</updated>
+    <updated>2024-11-30T17:51:50+01:00</updated>
     <author>
         <name>Mehul Panchal</name>
     </author>
@@ -230,7 +230,6 @@
         </author>
         <link href="https://blog.rockbytesec.com/7-cybersecurity-tips-for-developers.html"/>
         <id>https://blog.rockbytesec.com/7-cybersecurity-tips-for-developers.html</id>
-            <category term="Developers"/>
 
         <updated>2024-01-15T15:31:50+01:00</updated>
             <summary>
@@ -266,7 +265,6 @@
         </author>
         <link href="https://blog.rockbytesec.com/guide-to-whitebox-pentest.html"/>
         <id>https://blog.rockbytesec.com/guide-to-whitebox-pentest.html</id>
-            <category term="Pentesters"/>
 
         <updated>2024-01-15T15:29:43+01:00</updated>
             <summary>

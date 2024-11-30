@@ -47,10 +47,9 @@
                 "name": "Mehul Panchal"
             },
             "tags": [
-                   "Developers"
             ],
             "date_published": "2024-01-15T15:31:50+01:00",
-            "date_modified": "2024-01-15T15:32:09+01:00"
+            "date_modified": "2024-11-30T17:51:50+01:00"
         },
         {
             "id": "https://blog.rockbytesec.com/guide-to-whitebox-pentest.html",
@@ -62,10 +61,9 @@
                 "name": "Mehul Panchal"
             },
             "tags": [
-                   "Pentesters"
             ],
             "date_published": "2024-01-15T15:29:43+01:00",
-            "date_modified": "2024-01-15T15:32:41+01:00"
+            "date_modified": "2024-11-30T17:51:46+01:00"
         }
     ]
 }
