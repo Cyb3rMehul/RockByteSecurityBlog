@@ -3,7 +3,7 @@
     <title>RockByte Security Blog</title>
     <link href="https://blog.rockbytesec.com/feed.xml" rel="self" />
     <link href="https://blog.rockbytesec.com" />
-    <updated>2024-12-16T15:43:08+01:00</updated>
+    <updated>2024-12-16T15:59:36+01:00</updated>
     <author>
         <name>Mehul Panchal</name>
     </author>
@@ -51,14 +51,10 @@
 <p><span style="font-weight: 400;">It’s like many simulations of real-world malicious cyber attacks.</span></p>
 <h4><strong>You know why it works?</strong></h4>
 <ul>
-<li style="list-style-type: none;">
-<ul>
 <li style="font-weight: 400;" aria-level="1"><strong>Complete Attack Simulation</strong><span style="font-weight: 400;">: Pentesters don’t just run scans, they simulate the strategies used by cybercriminals, covering every possible entry point.</span></li>
 <li style="font-weight: 400;" aria-level="1"><strong>Human Expertise</strong><span style="font-weight: 400;">: Skilled professionals adapt to your unique systems, uncovering vulnerabilities that automated tools miss.</span></li>
 <li style="font-weight: 400;" aria-level="1"><strong>Prioritization</strong><span style="font-weight: 400;">: Instead of overwhelming you with false alarms, pentesters focus on real, high-risk threats, helping you address what matters most.</span></li>
 <li style="font-weight: 400;" aria-level="1"><strong style="font-family: var(--editor-font-family); font-size: inherit;">Mitigation</strong><span style="font-weight: 400;">: Pentesters further guide and help you fix the vulnerabilities found during the penetration tests.</span></li>
-</ul>
-</li>
 </ul>
 <h4><strong>Here comes Artificial Intelligence:</strong></h4>
 <p><span style="font-weight: 400;">While human experts are essential, AI can supercharge their efforts. Advanced AI tools help pentesters analyze complex systems faster, identify patterns, and predict potential attack vectors.</span></p>
