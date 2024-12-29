@@ -3,12 +3,168 @@
     <title>RockByte Security Blog</title>
     <link href="https://blog.rockbytesec.com/feed.xml" rel="self" />
     <link href="https://blog.rockbytesec.com" />
-    <updated>2024-12-22T22:23:40+01:00</updated>
+    <updated>2024-12-29T16:12:45+01:00</updated>
     <author>
         <name>Mehul Panchal</name>
     </author>
     <id>https://blog.rockbytesec.com</id>
 
+    <entry>
+        <title>How to Use GenAI to Fuzz and Detect Injection Vulnerabilities</title>
+        <author>
+            <name>Mehul Panchal</name>
+        </author>
+        <link href="https://blog.rockbytesec.com/how-to-fuzz-web-application-parameters-properly-and-detect-injection-vulnerabilities.html"/>
+        <id>https://blog.rockbytesec.com/how-to-fuzz-web-application-parameters-properly-and-detect-injection-vulnerabilities.html</id>
+
+        <updated>2024-12-29T16:08:41+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Understanding how to fuzz web application parameters is a critical skill, if you're trying to hack a web application. But if you've ever tried fuzzing using general wordlists, you’ve likely&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p data-pm-slice="1 1 []">Understanding how to fuzz web application parameters is a critical skill, if you're trying to hack a web application.</p>
+<p data-pm-slice="1 1 []">But if you've ever tried fuzzing using general wordlists, you’ve likely faced frustration: large wordlists take forever to run, and most tools don’t even tell you if the responses are vulnerable.</p>
+<p>Here’s the good news:</p>
+<p>With help of GenAI (i.e. ChatGPT), you can create smarter, smaller wordlists and build scripts to detect vulnerabilities automatically.</p>
+<p>In the next 5 minutes, you’ll be equipped to efficiently fuzz web applications and find injection vulnerabilities like a Pro Hacker.</p>
+<p>Let’s dive in!</p>
+<h2 data-pm-slice="1 1 []">Why Traditional Fuzzing is a Waste of Time?</h2>
+<h3>Why General Wordlists Fail?</h3>
+<p>Most wordlists are designed to cover every possibility. This sounds great, but in practice:</p>
+<ul data-spread="false">
+<li>
+<p><strong>They’re huge</strong>: Thousands or even millions of entries can take hours or days to run.</p>
+</li>
+<li>
+<p><strong>They’re generic</strong>: These lists don’t consider the specific context or technologies used by the target application.</p>
+</li>
+</ul>
+<h3>Why Manual Vulnerability Detection Fails?</h3>
+<p>Tools like WFuzz, Burp Intruder and ffuf can perform fuzzing, but they simply send requests and log responses. You’re left to:</p>
+<ol start="1" data-spread="false">
+<li>
+<p>Analyze response codes, headers, and body content manually.</p>
+</li>
+<li>
+<p>Guess whether an unusual response is a sign of vulnerability.</p>
+</li>
+</ol>
+<p>This approach is not only slow but also easy to miss critical vulnerabilities.</p>
+<h2 data-pm-slice="1 1 []">How GenAI-Powered Fuzzing and Detection Can Help?</h2>
+<p>What if you could:</p>
+<ul data-spread="false">
+<li>
+<p>Generate a targeted, precise wordlist?</p>
+</li>
+<li>
+<p>Automatically identify vulnerabilities in the responses?</p>
+</li>
+</ul>
+<p>With GenAI and custom scripts, you can!</p>
+<h1><strong>Here’s how:</strong></h1>
+<h2 data-pm-slice="1 2 []">Step 1: Gather Target Information</h2>
+<p>Before fuzzing, understand the application:</p>
+<ol start="1" data-spread="false">
+<li>
+<p><strong>Technology Stack</strong>: Is it using PHP, Python, Node.js, etc.?</p>
+</li>
+<li>
+<p><strong>Frameworks</strong>: Is it built with frameworks like Laravel, Django, or Express.js?</p>
+</li>
+<li>
+<p><strong>Parameter Patterns</strong>: Identify query parameters, headers, JSON keys, and more.</p>
+</li>
+<li>
+<p><strong>Authentication</strong>: Does it require special tokens or cookies?</p>
+</li>
+</ol>
+<h2 data-pm-slice="1 2 []">Step 2: Use GenAI to Generate Wordlists</h2>
+<p>Instead of relying on massive pre-built wordlists, use GenAI to craft a tailored list.</p>
+<p>Here’s how:</p>
+<ol start="1" data-spread="true">
+<li>
+<p><strong>Describe the Target</strong>: Provide GenAI with details such as the tech stack, known parameters, and any special syntax (e.g., SQL-like or JSON).</p>
+</li>
+<li>
+<p><strong>Request Specific Payloads</strong>: Ask for payloads specific to injection types.</p>
+</li>
+<li>
+<p><strong>Refine the List</strong>: Review and tweak the output to remove duplicates or irrelevant payloads.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Example GenAI Prompt</strong>:</p>
+<p>You're an expert ethical hacker. The web application you're hacking uses PHP language and MySQL database. The server is Apache. You've found a POST body parameter which looks like it might be vulnerable to SQL Injection.</p>
+<p>Write 100 non-duplicate lines of wordlist to fuzz the parameter. After fuzzing with this wordlist you should be sure whether the parameter is vulnerable.</p>
+<p>The lines of this wordlist should be URL encoded.</p>
+</blockquote>
+<figure class="post__image"><img loading="lazy"  src="https://blog.rockbytesec.com/media/posts/10/Screenshot-2024-12-29-at-16.05.29.png" alt="" width="809" height="499" sizes="100vw" srcset="https://blog.rockbytesec.com/media/posts/10/responsive/Screenshot-2024-12-29-at-16.05.29-xs.png 300w ,https://blog.rockbytesec.com/media/posts/10/responsive/Screenshot-2024-12-29-at-16.05.29-sm.png 480w ,https://blog.rockbytesec.com/media/posts/10/responsive/Screenshot-2024-12-29-at-16.05.29-md.png 768w ,https://blog.rockbytesec.com/media/posts/10/responsive/Screenshot-2024-12-29-at-16.05.29-lg.png 1024w ,https://blog.rockbytesec.com/media/posts/10/responsive/Screenshot-2024-12-29-at-16.05.29-xl.png 1360w ,https://blog.rockbytesec.com/media/posts/10/responsive/Screenshot-2024-12-29-at-16.05.29-2xl.png 1600w"></figure>
+<h2 data-pm-slice="1 3 []">Step 3: Automate Detection with Scripts</h2>
+<p>After generating a wordlist, automate vulnerability detection with Python or any scripting language you’re comfortable with. OR you can use GenAI to generate detection script functions for you.</p>
+<h3>Sample Python Script</h3>
+<p>Here’s a simple script to fuzz parameters and detect SQL injection vulnerabilities:</p>
+<pre><code>import requests
+
+# Target URL and parameter
+url = "https://example.com/login"
+params = {"username": "FUZZ", "password": "test"}
+
+# Fuzz payloads
+payloads = [
+    "' OR 1=1--",
+    "' UNION SELECT NULL--",
+    "admin' --",
+]
+
+# Fuzzing loop
+for payload in payloads:
+    print(f"Testing payload: {payload}")
+    params["username"] = payload
+    response = requests.post(url, data=params)
+    
+    # Simple detection logic tailored for the application
+    if "Welcome" in response.text or response.status_code == 200:
+        print(f"[+] Vulnerable to SQL Injection! Payload: {payload}")
+    else:
+        print("[-] Not vulnerable.")</code></pre>
+<blockquote>
+<p><strong>How It Works</strong>:</p>
+<ul data-spread="false">
+<li>
+<p>Replaces the <code>FUZZ</code> placeholder in the <code>username</code> parameter with each payload.</p>
+</li>
+<li>
+<p>Sends POST requests to the target.</p>
+</li>
+<li>
+<p>Checks if the response indicates a vulnerability (e.g., status code or specific text).</p>
+</li>
+</ul>
+</blockquote>
+<h3>Expand to Other Vulnerabilities</h3>
+<p>Modify the payloads and detection logic to test for:</p>
+<ul data-spread="false">
+<li>
+<p><strong>XSS</strong>: Check if payloads are reflected in the response.</p>
+</li>
+<li>
+<p><strong>Command Injection</strong>: Detect unusual system behavior or output.</p>
+</li>
+<li>
+<p><strong>Path Traversal</strong>: Look for directory listings or file contents.</p>
+</li>
+</ul>
+<h2 data-pm-slice="1 1 []">Conclusion</h2>
+<p>Fuzzing doesn’t have to be slow or ineffective.</p>
+<p>By using GenAI for smart wordlist generation and automating detection with scripts, you can uncover vulnerabilities efficiently and effectively.</p>
+<p>Follow me on 𝕏 @CyberMehul for updates on new blogs.</p>
+<div><hr></div>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>How to Overcome Third-Party Cybersecurity Risks Easily: Your Vendors are the Weakest Link</title>
         <author>
