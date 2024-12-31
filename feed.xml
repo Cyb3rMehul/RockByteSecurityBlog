@@ -3,12 +3,68 @@
     <title>RockByte Security Blog</title>
     <link href="https://blog.rockbytesec.com/feed.xml" rel="self" />
     <link href="https://blog.rockbytesec.com" />
-    <updated>2024-12-31T01:46:20+01:00</updated>
+    <updated>2024-12-31T16:09:40+01:00</updated>
     <author>
         <name>Mehul Panchal</name>
     </author>
     <id>https://blog.rockbytesec.com</id>
 
+    <entry>
+        <title>The Art of Secure Code Review: A Hacker’s Perspective</title>
+        <author>
+            <name>Mehul Panchal</name>
+        </author>
+        <link href="https://blog.rockbytesec.com/the-art-of-secure-code-review-a-hackers-perspective.html"/>
+        <id>https://blog.rockbytesec.com/the-art-of-secure-code-review-a-hackers-perspective.html</id>
+
+        <updated>2024-12-31T16:09:40+01:00</updated>
+            <summary>
+                <![CDATA[
+                    When you're writing code, the last thing you want is security flaws that hackers can exploit. But here’s the problem: many developers miss security issues during code reviews. These overlooked&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><span style="font-weight: 400;">When you're writing code, the last thing you want is security flaws that hackers can exploit.</span></p>
+<p><span style="font-weight: 400;">But here’s the problem: many developers miss security issues during code reviews.</span></p>
+<p><span style="font-weight: 400;">These overlooked flaws can end up in the final version of the software, which then gets used in real-world applications.</span></p>
+<p><span style="font-weight: 400;">And guess what? That’s exactly what bad hackers are waiting for.</span></p>
+<h3><strong>Why Do Security Issues Get Missed?</strong></h3>
+<p><span style="font-weight: 400;">Code reviews are a chance for developers to go over their work with fresh eyes.</span></p>
+<p><span style="font-weight: 400;">But security is often put on the back burner.</span></p>
+<p><span style="font-weight: 400;">Developers are usually focused on making sure the code works and looks clean.</span></p>
+<p><span style="font-weight: 400;">But the truth is, bad hackers don’t care about how pretty the code looks.</span></p>
+<p><span style="font-weight: 400;">They care about finding weak spots that can be turned into security holes. When code reviews don’t pay enough attention to security, these holes stay hidden—until a bad hacker finds them.</span></p>
+<h3><strong>Malicious Hackers Are Getting Smarter</strong></h3>
+<p><span style="font-weight: 400;">Malicious Hackers are always learning and getting better at breaking into systems.</span></p>
+<p><span style="font-weight: 400;">They know that traditional security checks, like scanning for bugs or common problems, aren’t enough anymore.</span></p>
+<p><span style="font-weight: 400;">Hackers now use more advanced methods that can find hidden vulnerabilities that regular checks might miss. This makes it harder for developers to stay ahead.</span></p>
+<p><span style="font-weight: 400;">Even small mistakes in the code could turn into big security risks.</span></p>
+<h3><strong>The Hacker’s Mindset: A New Way to Review Code</strong></h3>
+<p><span style="font-weight: 400;">So, how do you make sure you’re not leaving your code open to attack?</span></p>
+<p><span style="font-weight: 400;">The answer is: You need to think like a hacker.</span></p>
+<p><span style="font-weight: 400;">Instead of just looking for bugs or errors, put yourself in the shoes of someone who wants to break in.</span></p>
+<p><span style="font-weight: 400;">Ask yourself: “How could this code be exploited?”</span></p>
+<p><span style="font-weight: 400;">Think about every possible way an attacker might find and take advantage of a flaw.</span></p>
+<p><span style="font-weight: 400;">Are there places where user input can mess things up? Are there areas where sensitive data could leak out?</span></p>
+<p><span style="font-weight: 400;">Hackers are constantly looking for these kinds of opportunities.</span></p>
+<p><span style="font-weight: 400;">By adopting a hacker’s mindset during your code reviews, you can find security issues before attackers do.</span></p>
+<p><span style="font-weight: 400;">It’s like having a sneak peek at your code from the other side. You get to spot the problems early and fix them before they can be used against you.</span></p>
+<h3><strong>How to Apply This Thinking Practically?</strong></h3>
+<p><span style="font-weight: 400;">Here are some simple steps to start thinking like a hacker during code reviews:</span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><strong>Look for Input Validation Issues:</strong><span style="font-weight: 400;"> Hackers often exploit code by sending unexpected input. Make sure your code checks and filters every input from users. If you don't, hackers can use things like SQL injection to break into your system.</span></li>
+<li style="font-weight: 400;" aria-level="1"><strong>Test for Authentication Flaws:</strong><span style="font-weight: 400;"> Hackers love to mess with login systems. Check to see if your authentication system is strong. Are there weak passwords allowed? Can someone bypass the login process?</span></li>
+<li style="font-weight: 400;" aria-level="1"><strong>Check for Sensitive Data Leaks:</strong><span style="font-weight: 400;"> Look through your code for any information that shouldn’t be public, like passwords or personal user data. Hackers try to find ways to steal this data, so make sure it’s properly encrypted or hidden.</span></li>
+<li style="font-weight: 400;" aria-level="1"><strong>Think About Authorization:</strong><span style="font-weight: 400;"> Even if someone is logged in, are they able to access things they shouldn’t? Make sure users can only reach what they’re supposed to.</span></li>
+<li style="font-weight: 400;" aria-level="1"><strong>Try to Break It:</strong><span style="font-weight: 400;"> Don’t just read your code—test it. Try things you’d never expect a normal user to do. Hackers will try to break your system in ways you might not think of. See if you can find a weak spot by pushing your code to the limits.</span></li>
+</ol>
+<p> </p>
+<h3><strong>Can’t Do It Yourself?</strong></h3>
+<p><span style="font-weight: 400;">I’m here to help. You handle everything else… I handle reviewing your code. Contact me today for a quick free consultation.</span></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>How to Use GenAI to Fuzz and Detect Injection Vulnerabilities</title>
         <author>
