@@ -3,7 +3,7 @@
     <title>RockByte Security Blog</title>
     <link href="https://blog.rockbytesec.com/feed.xml" rel="self" />
     <link href="https://blog.rockbytesec.com" />
-    <updated>2024-12-29T16:12:45+01:00</updated>
+    <updated>2024-12-31T01:46:20+01:00</updated>
     <author>
         <name>Mehul Panchal</name>
     </author>
@@ -229,7 +229,7 @@ for payload in payloads:
         </content>
     </entry>
     <entry>
-        <title>How to Dramatically Decrease CyberAttacks of Your Systems</title>
+        <title>How to Dramatically Decrease CyberAttacks on Your Systems</title>
         <author>
             <name>Mehul Panchal</name>
         </author>
